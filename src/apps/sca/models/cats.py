@@ -18,14 +18,14 @@ class Cat(models.Model):
     )
     experience = models.PositiveSmallIntegerField(
         validators=(MaxValueValidator(30),),
-        verbose_name=_("experience"),
+        verbose_name=_("experience (yr.)"),
         help_text=_("Cat's experience in years."),
         default=0,
         blank=False,
         null=False,
     )
     salary = models.DecimalField(
-        verbose_name=_("salary $"),
+        verbose_name=_("salary ($)"),
         help_text=_("Cat's salary in USD."),
         validators=(MinValueValidator(1),),
         decimal_places=2,
