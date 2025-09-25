@@ -10,6 +10,7 @@ class NoteAdmin(ModelAdmin):
     list_display = (
         "id",
         "target",
+        "content",
         "created_at",
     )
     list_display_links = (

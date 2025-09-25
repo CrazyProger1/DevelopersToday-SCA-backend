@@ -4,7 +4,7 @@ from src.apps.sca.permissions import CanUpdateNoteUntilMissionOrTargetCompleted
 from src.apps.sca.serializers import (
     NoteListSerializer,
     NoteRetrieveSerializer,
-    NoteUpdateSerializer,
+    NoteUpdateSerializer, NoteCreateSerializer,
 )
 from src.apps.sca.services.db import get_all_notes
 
@@ -14,11 +14,13 @@ class NoteViewSet(
     mixins.ListModelMixin,
     mixins.RetrieveModelMixin,
     mixins.UpdateModelMixin,
+    mixins.CreateModelMixin,
 ):
     queryset = get_all_notes()
     serializer_class = NoteListSerializer
     permission_classes = (CanUpdateNoteUntilMissionOrTargetCompleted,)
     serializer_classes = {
+        "create": NoteCreateSerializer,
         "list": NoteListSerializer,
         "retrieve": NoteRetrieveSerializer,
         "update": NoteUpdateSerializer,

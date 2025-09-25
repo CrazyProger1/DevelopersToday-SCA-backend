@@ -16,7 +16,6 @@ class MissionCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Mission
         fields = (
-            "cat",
             "targets",
         )
 

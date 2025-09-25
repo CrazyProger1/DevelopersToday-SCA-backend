@@ -22,4 +22,5 @@ from src.apps.sca.serializers.notes import (
     NoteListSerializer,
     NoteRetrieveSerializer,
     NoteUpdateSerializer,
+    NoteCreateSerializer,
 )

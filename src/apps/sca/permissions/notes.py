@@ -5,7 +5,7 @@ from src.apps.sca.services.db import can_update_note
 
 
 class CanUpdateNoteUntilMissionOrTargetCompleted(permissions.BasePermission):
-    message = _("Cannot update note of completed target or mission")
+    message = _("Cannot create or update note of completed target or mission")
 
     def has_object_permission(self, request, view, obj):
         if request.method in {"PUT", "PATCH"}:
