@@ -127,6 +127,8 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 
+postgres
+
 # Environments
 .env
 .venv
@@ -173,3 +175,5 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
+# Media directory
+media
