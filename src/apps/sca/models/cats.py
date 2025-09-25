@@ -32,4 +32,11 @@ class Cat(models.Model):
         max_digits=10,
         blank=False,
         null=False,
+    )  # Can be normalized using DB normal forms
+    image = models.ImageField(
+        upload_to="cats/",
+        verbose_name=_("image"),
+        help_text=_("Cat's image 🐈‍."),
+        blank=True,
+        null=True,
     )

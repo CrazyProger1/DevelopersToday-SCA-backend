@@ -42,5 +42,17 @@ UNFOLD = {
                     },
                 ],
             },
+            {
+                "title": _("SCA"),
+                "collapsible": True,
+                "items": [
+                    {
+                        "title": _("Cats"),
+                        "icon": "pets",
+                        "link": reverse_lazy("admin:sca_cat_changelist"),
+                    },
+
+                ],
+            },
         ]}
 }
