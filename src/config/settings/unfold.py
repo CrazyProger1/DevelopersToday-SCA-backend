@@ -51,8 +51,23 @@ UNFOLD = {
                         "icon": "pets",
                         "link": reverse_lazy("admin:sca_cat_changelist"),
                     },
-
+                    {
+                        "title": _("Missions"),
+                        "icon": "rocket",
+                        "link": reverse_lazy("admin:sca_mission_changelist"),
+                    },
+                    {
+                        "title": _("Targets"),
+                        "icon": "target",
+                        "link": reverse_lazy("admin:sca_target_changelist"),
+                    },
+                    {
+                        "title": _("Notes"),
+                        "icon": "note",
+                        "link": reverse_lazy("admin:sca_note_changelist"),
+                    },
                 ],
             },
-        ]}
+        ],
+    },
 }

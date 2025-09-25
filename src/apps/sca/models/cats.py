@@ -32,7 +32,7 @@ class Cat(models.Model):
         max_digits=10,
         blank=False,
         null=False,
-    )  # Can be normalized using DB normal forms
+    )  # Should be normalized using DB normal forms
     image = models.ImageField(
         upload_to="cats/",
         verbose_name=_("image"),
@@ -40,3 +40,10 @@ class Cat(models.Model):
         blank=True,
         null=True,
     )
+
+    class Meta:
+        verbose_name = _("Cat")
+        verbose_name_plural = _("Cats")
+
+    def __str__(self):
+        return self.name

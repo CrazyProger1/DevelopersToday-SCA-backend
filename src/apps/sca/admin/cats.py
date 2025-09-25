@@ -7,7 +7,7 @@ from src.utils.django.admin import ImageTagAdminMixin
 
 
 @admin.register(Cat, site=site)
-class CatAdmin(ImageTagAdminMixin, ModelAdmin ):
+class CatAdmin(ImageTagAdminMixin, ModelAdmin):
     list_display = (
         "image_tag",
         "name",
@@ -19,6 +19,4 @@ class CatAdmin(ImageTagAdminMixin, ModelAdmin ):
         "image_tag",
         "name",
     )
-    search_fields = (
-        "name",
-    )
+    search_fields = ("name",)
