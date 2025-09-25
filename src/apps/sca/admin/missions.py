@@ -8,11 +8,15 @@ from src.apps.sca.models import Mission
 @admin.register(Mission, site=site)
 class MissionAdmin(ModelAdmin):
     list_display = (
+        "id",
         "cat",
         "is_completed",
         "created_at",
     )
-    list_display_links = ("cat",)
+    list_display_links = (
+        "id",
+        "cat",
+    )
     autocomplete_fields = ("cat",)
     list_filter = ("is_completed",)
     search_fields = ("cat",)

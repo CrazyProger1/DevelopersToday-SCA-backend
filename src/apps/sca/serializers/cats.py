@@ -27,6 +27,4 @@ class CatRetrieveSerializer(serializers.ModelSerializer):
 class CatUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cat
-        fields = (
-            "salary",
-        )
+        fields = ("salary",)

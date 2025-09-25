@@ -2,18 +2,17 @@ from django.contrib import admin
 from unfold.admin import ModelAdmin
 
 from src.apps.accounts.sites import site
-from src.apps.sca.models import Note
+from src.apps.sca.models import Breed
 
 
-@admin.register(Note, site=site)
-class NoteAdmin(ModelAdmin):
+@admin.register(Breed, site=site)
+class BreedAdmin(ModelAdmin):
     list_display = (
         "id",
-        "target",
-        "created_at",
+        "name",
     )
     list_display_links = (
         "id",
-        "target",
+        "name",
     )
-    autocomplete_fields = ("target",)
+    search_fields = ("name",)

@@ -20,3 +20,4 @@ class CatAdmin(ImageTagAdminMixin, ModelAdmin):
         "name",
     )
     search_fields = ("name",)
+    autocomplete_fields = ("breed",)

@@ -10,8 +10,9 @@ class Cat(models.Model):
         null=False,
         blank=False,
     )
-    breed = models.CharField(
-        max_length=255,
+    breed = models.ForeignKey(
+        to="Breed",
+        on_delete=models.CASCADE,
         verbose_name=_("breed"),
         null=False,
         blank=False,
